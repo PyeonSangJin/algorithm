@@ -11,11 +11,13 @@ int main(int argc, char *argv[]) {
 	cin >> input;
 
 	dp[0] = dp[1] = 1;
+
+	if (input.at(0) == '0') {
+		std::cout << "0";
+		return 0;
+	}
+
 	if (input.size() > 1) {
-		if (input.at(0) == '0') {
-			std::cout << "0";
-			return 0;
-		}
 
 		if (input.at(0) == '0' && input.at(1) == '0') {
 			std::cout << "0";
